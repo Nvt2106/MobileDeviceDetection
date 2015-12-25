@@ -15,8 +15,9 @@ var devices = searcher.SearchAllDevices();
 var watcher = new MobileDeviceDetection();
 deviceDetection.DevicePlugDetected += (sender, e) => { // TODO };
 deviceDetection.DeviceUnplugDetected += (sender, e) => { // TODO };
+deviceDetection.Start();
 ```
-
+<p>Remember to stop it after using, by deviceDetection.Stop() method.</p>
 <p>In e parameter, there is a property DeviceID.</p>
 <p>To get mobile device informtation based on DeviceID:</p>
 ``` C#
